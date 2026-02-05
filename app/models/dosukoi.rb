@@ -1,0 +1,2 @@
+class Dosukoi < ApplicationRecord
+end
