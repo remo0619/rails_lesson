@@ -27,6 +27,9 @@
         <td><%= user.introduction %></td>
         <td><%= user.updated_at.to_fs(:datetime_jp) %></td>
         <td><%= user.created_at.to_fs(:datetime_jp) %></td>
+        <td>
+          <%= link_to "参照", user %>
+        </td>
       </tr>
     <% end %>
   </tbody>
