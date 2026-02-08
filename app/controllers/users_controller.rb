@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
     @users = User.all #allメソッドはusersテーブルのレコードを全て取得できるメソッド
+    @posts = Post.all #postsテーブルの全データを取得する
   end
 
   def new
@@ -19,6 +20,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @post = Post.new
+    #@posts = Post.where(user_id: @user.id) #この記述でも実装できる
+    @posts = @user.posts #リレーションを定義することでこのような記述が可能
   end
 
   def edit

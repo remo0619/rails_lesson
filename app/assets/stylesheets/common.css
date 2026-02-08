@@ -32,3 +32,8 @@ table td {
   padding: 5px;
 }
 
+.posts-content {
+  width: 350px;
+  height: 200px;
+}
+
