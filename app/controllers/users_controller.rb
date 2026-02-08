@@ -10,10 +10,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params.require(:user).permit(:name, :email, :age, :introduction))
+    binding.pry
     if @user.save
+      binding.pry
       flash[:notice] = "ユーザーを新規登録しました"
       redirect_to :users
     else
+      binding.pry
       render "new", status: :unprocessable_entity
     end
   end
